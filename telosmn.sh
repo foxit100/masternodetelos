@@ -24,7 +24,7 @@ clear
 echo -e "You have an older version of the masternode Telos ${RED}$scupdate${NC} installation script, the current one is ${GREEN}"$old"${NC}"
 echo ""
 echo "We will update now, please wait ..."
-./update.sh
+./update.sh >/dev/null 2>&1
 else
 
 if [ "$off" == "yes" ]; 

@@ -27,14 +27,6 @@ echo "We will update now, please wait ..."
 ./update.sh
 else
 
-if [ -f update.sh ]
-then
-clear
-echo -e "${GREEN}Thank you, the update was successful !${NC}"
-echo ""
-rm update.sh >/dev/null 2>&1
-fi
-
 if [ "$off" == "yes" ]; 
 then
 echo ""
@@ -161,6 +153,13 @@ function configure_bashrc() {
 ## Check for wallet update
 
 clear
+
+if [ -f update.sh ]
+then
+echo -e "${GREEN}Thank you, the update was successful !${NC}"
+echo ""
+rm update.sh >/dev/null 2>&1
+fi
 
 if [ -f "/usr/local/bin/transcendenced" ]
 then

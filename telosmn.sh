@@ -10,7 +10,7 @@ scupdate="1.0.0"
 off=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/off)
 old=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/scupdate)
 
-if [ $scupdate != $old ]; 
+if [ $scupdate != "$old" ]; 
 then
 echo ""
 echo -e "${RED}Zaktualizuj skrypt !${NC}"

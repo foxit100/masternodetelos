@@ -9,11 +9,17 @@ scupdate="1.0.0"
 
 off=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/off)
 old=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/scupdate)
+version=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/current)
+link=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/download)
+connections=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/connections)
 
 if [ $scupdate != "$old" ]; 
 then
-echo ""
-echo -e "${RED}Zaktualizuj skrypt !${NC}"
+wget https://raw.githubusercontent.com/foxit100/telosmn/main/update.sh
+chmod 777 update.sh
+echo -e "You have an older version of the masternode Telos ${RED}$scupdate${NC} installation script, the current one is ${GREEN}"$old"${NC}"
+echo "We will update now, please wait ..."
+./update.sh
 else
 
 if [ "$off" == "yes" ]; 
@@ -83,9 +89,6 @@ DELETED="$(cat /root/bin/deleted 2>/dev/null | wc -l)"
 ALIASES="$(find /root/.transcendence_* -maxdepth 0 -type d 2>/dev/null | cut -c22-)"
 face="$(lshw -C network | grep "logical name:" | sed -e 's/logical name:/logical name: /g' | awk '{print $3}' | head -n1)"
 IP4=$(curl -s4 api.ipify.org)
-version=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/current)
-link=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/download)
-connections=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/connections)
 PORT=8051
 RPCPORTT=8351
 gateway1=$(/sbin/route -A inet6 | grep -v ^fe80 | grep -v ^ff00 | grep -w "$face")

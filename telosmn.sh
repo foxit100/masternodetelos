@@ -23,7 +23,7 @@ fi
 
 ## Error checks
 
-perl -i -ne 'print if ! $a{$_}++' /etc/network/interfaces
+perl -i -ne 'print if ! $a{$_}++' /etc/network/interfaces >/dev/null 2>&1
 
 if [ ! -d "/root/bin" ]; then
 mkdir /root/bin

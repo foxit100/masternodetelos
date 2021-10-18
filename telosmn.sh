@@ -10,6 +10,12 @@ scupdate="1.0.0"
 off=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/off)
 old=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/scupdate)
 
+if [ $scupdate != "1.0.0" ]; 
+then
+echo ""
+echo -e "${RED}Zaktualizuj skrypt !${NC}"
+else
+
 if [ $off == "yes" ]; 
 then
 echo ""
@@ -519,6 +525,7 @@ echo "${ALIAS}_getinfo"
 echo "${ALIAS}_getpeerinfo"
 echo "${ALIAS}_resync"
 echo "${ALIAS}_reindex"
+fi
 fi
 fi
 echo ""

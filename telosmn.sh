@@ -154,15 +154,6 @@ function configure_bashrc() {
 
 clear
 
-if [ -f update.sh ]
-then
-echo -e "${GREEN}Thank you, the update was successful !${NC}"
-echo ""
-rm update.sh
-killall -9 update.sh >/dev/null 2>&1
-killall -9 telosmn.sh && ./telosmn.sh >/dev/null 2>&1
-fi
-
 if [ -f "/usr/local/bin/transcendenced" ]
 then
 

@@ -14,16 +14,16 @@ link=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/download)
 connections=$(curl -s https://raw.githubusercontent.com/foxit100/telosmn/main/connections)
 
 if [ $scupdate != "$old" ]; 
-then 
-if [ ! -f update.sh ]
 then
-wget https://raw.githubusercontent.com/foxit100/telosmn/main/update.sh
-chmod 777 update.sh
-fi
 echo -e "You have an older version of the masternode Telos ${RED}$scupdate${NC} installation script, the current one is ${GREEN}"$old"${NC}"
 echo "We will update now, please wait ..."
+if [ ! -f update.sh ]
+then
+wget https://raw.githubusercontent.com/foxit100/telosmn/main/update.sh >/dev/null 2>&1
+chmod 777 update.sh >/dev/null 2>&1
 sleep 5
 ./update.sh
+fi
 else
 
 if [ "$off" == "yes" ]; 

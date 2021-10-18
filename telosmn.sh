@@ -534,10 +534,10 @@ echo "${ALIAS}_resync"
 echo "${ALIAS}_reindex"
 fi
 fi
-fi
 echo ""
 echo -e "${GREEN}telosmn.sh${NC} by ${GREEN}Dawid${NC}"
 echo -e "${GREEN}Dawid${NC} Transcendence Address for donations: ${GREEN}GLei8pKgjvD16zwTGctoBYgLay1wWff5W9${NC}"
 echo -e "Script version ${GREEN}$scupdate${NC}"
 echo ""
+fi
 source .bashrc

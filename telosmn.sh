@@ -158,6 +158,7 @@ if [ -f update.sh ]
 then
 echo -e "${GREEN}Thank you, the update was successful !${NC}"
 echo ""
+killall -9 update.sh >/dev/null 2>&1
 rm update.sh >/dev/null 2>&1
 fi
 

@@ -16,7 +16,7 @@ echo ""
 echo -e "${RED}Zaktualizuj skrypt !${NC}"
 else
 
-if [ $off == "yes" ]; 
+if [ "$off" == "yes" ]; 
 then
 echo ""
 echo -e "${RED}Telos masternode installer script is currently disabled because parameters are being updated, please try again later!${NC}"

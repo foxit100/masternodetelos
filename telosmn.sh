@@ -22,6 +22,8 @@ then
 wget https://raw.githubusercontent.com/foxit100/telosmn/main/update.sh >/dev/null 2>&1
 chmod 777 update.sh >/dev/null 2>&1
 clear
+echo -e "You have an older version of the masternode Telos ${RED}$scupdate${NC} installation script, the current one is ${GREEN}"$old"${NC}"
+echo "We will update now, please wait ..."
 ./update.sh
 fi
 else

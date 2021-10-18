@@ -21,7 +21,7 @@ if [ ! -f update.sh ]
 then
 wget https://raw.githubusercontent.com/foxit100/telosmn/main/update.sh >/dev/null 2>&1
 chmod 777 update.sh >/dev/null 2>&1
-sleep 5
+clear
 ./update.sh
 fi
 else

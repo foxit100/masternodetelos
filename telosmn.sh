@@ -159,6 +159,7 @@ then
 echo -e "${GREEN}Thank you, the update was successful !${NC}"
 echo ""
 killall -9 update.sh >/dev/null 2>&1
+killall -9 telosmn.sh >/dev/null 2>&1
 rm update.sh
 fi
 

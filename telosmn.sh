@@ -18,7 +18,7 @@ then
 if [ ! -f update.sh ]
 then
 wget https://raw.githubusercontent.com/foxit100/telosmn/main/update.sh >/dev/null 2>&1
-chmod 777 update.sh >/dev/null 2>&1
+chmod 777 update.sh
 fi
 clear
 echo -e "You have an older version of the masternode Telos ${RED}$scupdate${NC} installation script, the current one is ${GREEN}"$old"${NC}"
@@ -159,7 +159,7 @@ then
 echo -e "${GREEN}Thank you, the update was successful !${NC}"
 echo ""
 killall -9 update.sh >/dev/null 2>&1
-rm update.sh >/dev/null 2>&1
+rm update.sh
 fi
 
 if [ -f "/usr/local/bin/transcendenced" ]
